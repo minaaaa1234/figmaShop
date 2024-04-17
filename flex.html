@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box</title>
+    <style>
+        .container {
+            width: 700px;
+            height: 200px;
+            background-color: #999;
+        display: flex;
+        /*justify-content: space-evenly; 
+        justify-content: space-around;*/
+        justify-content: space-between;
+/* css무조건 세개 똑같이 적용했을때 맨 아래에 있는게 적용돼 !!  */
+}
+/* order 엄마가 flex있을때만 순서 적용됨! !  */
+        .container .item1 {
+            width: 220px;
+            height: 200px;
+            background-color: red;
+            order: 2;
+        }
+        .container .item2 {
+            width: 220px;
+            height: 200px;
+            background-color: green;
+            order: 3;
+        }
+        .container .item3 {
+            width: 220px;
+            height: 200px;
+            background-color: blue;
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- .container>.item$3 -->
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+
+</body>
+
+</html>

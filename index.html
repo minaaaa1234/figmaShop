@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 이름 - 시멘틱태그 레이아웃 </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            background-color: #999;
+            margin: 0 auto;
+            /* 위아래 0, 좌우 auto - 중앙정렬됨 */
+        }
+
+        #wrap header {
+            width: 1200px;
+            height: 100px;
+            background-color: #123;
+            display: flex;
+        }
+
+        /* logo */
+        #wrap header h1.logo {
+            width: 300px;
+            height: 100px;
+            background-color: green;
+            /* float: left; */
+        }
+
+        #wrap header h1.logo a img {
+            margin-top: 40px;
+        }
+
+        /* menu */
+        #wrap header nav.menu {
+            width: 900px;
+            height: 100px;
+            background-color: rgb(99, 0, 170);
+            /* float: left; */
+        }
+
+
+
+        #wrap main {
+            width: 1200px;
+            height: 500px;
+            background-color: blue;
+            /* display: none;  가려줌 */
+        }
+
+        /* slide */
+        #wrap main section.slide {
+            width: 1200px;
+            height: 300px;
+            background-color: pink;
+        }
+
+      
+        /* contents */
+        #wrap main section.contents {
+            width: 1200px;
+            height: 200px;
+            background-color: rgb(86, 89, 90);
+            display: flex;
+        }
+        #wrap main section.contents .notice {
+            width: 400px;
+            height: 200px;
+            background-color: rgb(18, 123, 159);
+        }
+        #wrap main section.contents .gallery {
+            width: 400px;
+            height: 200px;
+            background-color: rgb(170, 26, 202);
+        }
+
+
+        #wrap footer {
+            width: 1200px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+        }
+
+        #wrap footer .blogo {
+            width: 300px;
+            height: 100px;
+            background-color: #333;
+        }
+
+        #wrap footer .bmenu {
+            width: 600px;
+            height: 100px;
+            background-color: brown;
+        }
+
+        #wrap footer .sns {
+            width: 300px;
+            height: 100px;
+            background-color: rgb(254, 136, 0);
+        }
+
+        /* 강제 가려줌 */
+        .blind {
+            width: 0;
+            height: 0;
+            font-size: 0;
+            text-indent: -9999999999px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ctrl + / : 주석달기 -->
+    <!-- shift + alt + ↓ : 복사붙이기-->
+
+    <!-- #wrap (enter) -->
+    <div id="wrap">
+        <!-- header+main+footer (enter) -->
+        <header>
+            <!-- h1.logo -->
+            <h1 class="logo">
+                <!-- a>img -->
+                <a href="./index.html"><img src="./image/logo-gnb.svg" alt="로고"></a>
+            </h1>
+
+            <!-- nav.menu -->
+            <nav class="menu"></nav>
+
+        </header>
+        <main>
+            <!-- section.slide+section.contents -->
+            <section class="slide">
+                <h2 class="blind"> 메인슬라이드</h2>
+            </section>
+            <section class="contents">
+                <h2 class="blind">공지사항,갤러리,배너</h2>
+                <!-- .notice+.gallery+.banner -->
+                <div class="notice"></div>
+                <div class="gallery"></div>
+                <div class="banner"></div>
+            </section>
+        </main>
+        <footer>
+            <!-- 하단로고 -->
+            <!-- .blogo+.bmenu+.sns -->
+            <div class="blogo"></div>
+            <div class="bmenu"></div>
+            <div class="sns"></div>
+            <!-- 하단메뉴 -->
+            <!-- SNS -->
+        </footer>
+    </div>
+</body>
+
+</html>
